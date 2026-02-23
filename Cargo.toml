@@ -1,0 +1,28 @@
+[workspace]
+members = [
+    "ledger-rs",
+    "ledger-rs-macros"
+]
+resolver = "2"
+
+[workspace.dependencies]
+syn = { version = "2.0", features = ["full", "extra-traits"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+# 
+serde = { version = "1.0.228", features = ["derive"] }
+uuid = { version = "1.19.0", features = ["v4"] }
+tokio = { version = "1.49.0", features = ["full"] }
+parking_lot = "0.12"
+bytes = "1.11.0"
+directories = "6.0.0"
+thiserror = "2.0.17"
+tracing = "0.1.44"
+tracing-subscriber = "0.3.22"
+# datastore
+memmap2 = "0.9.9"
+rkyv = { version = "0.8.14", features = ["std", "little_endian"] }
+bytecheck = "0.8.2"
+rand = "0.10.0"
+base64 = "0.22.1"
+colored = "3.1.1"

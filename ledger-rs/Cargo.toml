@@ -1,0 +1,36 @@
+[package]
+name = "ledger-rs"
+version = "0.1.0"
+edition = "2024"
+description = "a simple but very high performance rust library for managing a contiguous table of rows on disk"
+
+[[bin]]
+name = "basic"
+path = "examples/basic.rs"
+
+[[bin]]
+name = "slop_bench"
+path = "examples/slop_bench.rs"
+
+[dependencies]
+ledger-rs-macros = {version = "0.1.0", path = "../ledger-rs-macros" }
+# 
+serde = { workspace = true, features = ["derive"] }
+uuid = { workspace = true, features = ["v4"] }
+# 
+tokio = { workspace = true, features = ["full"] }
+parking_lot.workspace = true
+bytes.workspace = true
+# 
+directories.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+# 
+# datastore
+memmap2.workspace = true
+rkyv = { workspace = true, features = ["std", "little_endian"] }
+bytecheck.workspace = true
+rand.workspace = true
+base64.workspace = true
+colored.workspace = true
