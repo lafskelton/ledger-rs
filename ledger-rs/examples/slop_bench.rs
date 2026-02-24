@@ -10,6 +10,8 @@ use std::time::{Duration, Instant};
 /**
  *  CERTIFIED SLOP BROUGHT TO YOU BY:
  *      GEMINI 3.1 PRO   
+ *
+ *  dev note: I told it "Give it your sloppiest slop." and this is the result....
  */
 
 const TEST_LEN: usize = 123_4567;
