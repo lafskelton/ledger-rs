@@ -1,7 +1,7 @@
 # ledger-rs
 A simple Rust library for reading and writing a contiguous table of rows to and from the Linux filesystem. It provides extremely efficient methods for reading and writing rows virtually in-place.
 
-This library is a small part of a larger project and is actively evolving.
+This library is a small part of a larger project and is actively evolving. PRs welcome.
 
 ### Under the hood
 
@@ -92,12 +92,14 @@ unsafe {
 
 ### Bench
 
-The repository includes a slop benchmark script to test the *checked* API throughput. You can run it with cargo run --bin slop_bench --release.
+The repository includes an AI slop benchmark script to test the *checked* API throughput. This library is a small part of a bigger library, so I haven't put much effort into benchmarking since this lib exceeds my needs.
 
-Hardware: AMD Ryzen 7 mobile + DDR5 + 980 PRO nvme (luks)
-
+Run the benchmark:
+```
+cargo run --bin slop_bench --release
 ```
 
+```
 Starting sequential insertion of 1234567 records...
 
 Starting sequential insertion of 1234567 records...
@@ -133,5 +135,6 @@ Starting chaotic random mutations of 1234567 records...
 
 
 ```
+Hardware: AMD Ryzen 7 mobile + DDR5 + 980 PRO nvme (luks)
 
 
